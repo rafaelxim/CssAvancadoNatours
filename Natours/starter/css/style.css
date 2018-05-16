@@ -49,6 +49,7 @@ body {
 	top: 40% ;
 	left: 50% ;
 	transform: translate(-50%,-50%);
+	text-align: center ;
 }
 
 .heading-primary{
@@ -73,6 +74,36 @@ body {
 	font-weight: 400 ;
 	letter-spacing: 12.4px ;
 	animation: moveInRight 2s ease-in;
+	margin-bottom: 20px ;
+}
+
+.btn{
+}
+
+.btn:hover{
+	transform: translateY(-5px) ;
+	box-shadow: 0 10px 20px rgba(0,0,0,.2); 
+}
+
+.btn:active{
+	transform: translateY(-1px);
+	box-shadow: 0 5px 10px rgba(0,0,0,.2); 
+
+}
+
+.btn-white{
+	background-color: #fff;
+	color: #777;
+}
+
+.btn:link, 
+.btn:visited {
+	text-decoration: none ;
+	text-transform: uppercase; 
+	padding: 10px 40px ;
+	display: inline-block;
+	border-radius: 100px ;
+	transition: all .2s;
 }
 
 @keyframes moveInLeft {
