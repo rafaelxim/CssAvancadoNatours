@@ -62,6 +62,9 @@ body {
 	font-weight: 400 ;
 	font-size: 60px ;
 	letter-spacing: 35px ;
+	animation-name: moveInLeft ;
+	animation-duration: 2s ;
+	animation-timing-function: ease-in; 
 }
 
 .heading-primary-sub{
@@ -69,9 +72,34 @@ body {
 	font-size: 20px ;
 	font-weight: 400 ;
 	letter-spacing: 12.4px ;
+	animation: moveInRight 2s ease-in;
 }
 
+@keyframes moveInLeft {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
 
+	100% {
+		opacity: 1 ;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight {
+	
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	100% {
+		opacity: 1 ;
+		transform: translate(0);
+	}
+}
 
 
 
