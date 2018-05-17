@@ -104,6 +104,37 @@ body {
 	display: inline-block;
 	border-radius: 100px ;
 	transition: all .2s;
+	position: relative;
+}
+
+	
+/*esta prop animation-fill-mode: backwards faz com que os atributos no 0% da keyframes, sejam aplicados automaticamente.*/
+.btn-animated{
+	animation-fill-mode: backwards;
+	animation: moveInUp 2s ease-in;
+
+}
+
+.btn::after {
+	content: ''; 
+	display: inline-block;
+	border-radius: 100px ;
+	width: 100% ; 
+	height: 100% ;
+	position: absolute;
+	top :0;
+	left: 0 ;
+	z-index: -1 ;
+	transition: all .4s ;
+}
+
+.btn-white::after{
+	background-color: #fff;
+}
+
+.btn:hover::after {
+	transform: scale(1.5);
+	opacity: 0 ;
 }
 
 @keyframes moveInLeft {
@@ -130,6 +161,19 @@ body {
 		opacity: 1 ;
 		transform: translate(0);
 	}
+}
+
+@keyframes moveInUp{
+	0% { 
+		transform: translateY(100px);
+		opacity: 0;
+	 }
+
+	 100% {
+		opacity: 1 ;
+		transform: translateY(0);
+
+	 }
 }
 
 
