@@ -1,0 +1,6 @@
+Para rodar o servidor:
+1. iniciar o live-server: 
+live-server
+
+2. inicial o watch do compilador do sass:
+npm run compile:sass
