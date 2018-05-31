@@ -22,6 +22,30 @@ body {
   padding: 3rem;
   box-sizing: border-box; }
 
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInUp {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 /*95vh = 95 % do viewport da pagina  */
 .header {
   height: 95vh;
@@ -42,26 +66,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  /*A propriedade display: block faz com que o elemento ocupe 100% da width*/ }
-  .heading-primary--main {
-    display: block;
-    font-weight: 400;
-    font-size: 6rem;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-in; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 1.24rem;
-    animation: moveInRight 2s ease-in;
-    margin-bottom: 2rem; }
 
 .btn {
   /*esta prop animation-fill-mode: backwards faz com que os atributos no 0% da keyframes, sejam aplicados automaticamente.*/ }
@@ -101,27 +105,3 @@ body {
     left: 0;
     z-index: -1;
     transition: all .4s; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInUp {
-  0% {
-    transform: translateY(10rem);
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
